@@ -1,0 +1,50 @@
+$bg-color: #3f4c6b;
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html, body{color: darken($bg-color, 10%); font-size: 18px; padding: 0; margin: 0}
+.container{width: 95%; margin: 0 auto;}
+.header-banner{
+    
+    background-color: $bg-color;
+    padding: 3% 6%;
+    color: lighten($bg-color, 60%);
+    h1{
+        color: lighten($bg-color, 65%);
+        font-family: 'Overlock', cursive;
+        font-size: 3em;
+        margin: 0;
+    }
+}
+.section{
+	background-color: #f7f7f7;
+	padding: 2% 3%;
+	margin: 2% 0;
+
+    .header{
+        h2:before{content: "- ";}
+        margin-bottom: 3%;
+    }
+
+    code{
+        $bg-code: #C1289E;
+        padding: .5%;
+        font-size: .8em;
+        background-color: lighten($bg-code, 50%);
+        color: $bg-code;
+    }
+
+    h3{color: darken($bg-color, 5%)}
+    table{width: 100%;}
+    table td{padding: 0.5%}
+}
+.exemple{
+	background-color: #eee;
+	padding: 2% 2%;
+	margin-bottom: 1%;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+}

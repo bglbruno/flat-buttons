@@ -1,0 +1,136 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.btn{
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	
+	background-image: none;
+	padding: $padding-base-vertical $padding-base-horizontal;
+
+	text-decoration: none;
+
+	font: {
+		family: $font-family-base;
+		weight: $btn-font-weight;
+		size: $font-size-base;
+	}
+
+	cursor: pointer;
+
+	border: 1px solid transparent;
+  	white-space: nowrap;
+
+  	&,
+	&:hover,
+	&:focus,
+	&:active {
+		outline: 0;
+	}
+
+	&:active,
+	&.active {
+		background-image: none;
+		/*box-shadow(inset 0 3px 5px rgba(0,0,0,.125));*/
+	}
+
+	-webkit-transition: all 100ms linear;
+	-moz-transition: all 100ms linear;
+	-ms-transition: all 100ms linear;
+	-o-transition: all 100ms linear;
+	transition: all 100ms linear;
+
+	&.disabled,
+	&[disabled] {
+		cursor: not-allowed;
+		pointer-events: none; // Future-proof disabling of clicks
+	}
+}
+
+//== Buttons variants
+
+@each $type, $color, $bg, $border in 
+	(default, $btn-default-color, $btn-default-bg, $btn-default-border),
+	(inverse, $btn-inverse-color, $btn-inverse-bg, $btn-inverse-border),
+	(primary, $btn-primary-color, $btn-primary-bg, $btn-primary-border),
+	(success, $btn-success-color, $btn-success-bg, $btn-success-border),
+	(info, $btn-info-color, $btn-info-bg, $btn-info-border),
+	(warning, $btn-warning-color, $btn-warning-bg, $btn-warning-border),
+	(danger, $btn-danger-color, $btn-danger-bg, $btn-danger-border) {
+
+	.btn-#{$type} {
+		@include btn-variant($color, $bg, $border);
+		&:hover{
+			@include btn-hover-variant($color, $bg, $border);
+		}
+
+		&.disabled,
+  		&[disabled]{
+  			@if $type == default{
+  				color: lighten($btn-default-color, 30%);
+  				background-color: $gray-lighter;
+			} @else{
+				background-color: transparentize($bg, 0.3);
+			}
+  			text-shadow: none;
+		}
+	}
+}
+
+.btn-link {
+  color: $link-color;
+  font-weight: normal;
+  cursor: pointer;
+
+  background-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+
+  &.disabled,
+  &[disabled]{
+  	cursor: not-allowed;
+  	color: $btn-link-disabled-color;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+//== Buttons sizes
+.btn-xs{
+	font-size: $font-size-extra-small;
+	padding: $padding-xs-vertical $padding-xs-horizontal;
+}
+.btn-sm{
+	font-size: $font-size-small;
+	padding: $padding-small-vertical $padding-small-horizontal;
+}
+.btn-lg{
+	font-size: $font-size-large;
+	padding: $padding-large-vertical $padding-large-horizontal;
+}
+
+//== Button blocks
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
