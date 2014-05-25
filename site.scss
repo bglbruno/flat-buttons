@@ -15,12 +15,7 @@ html, body{color: darken($bg-color, 10%); font-size: 18px; padding: 0; margin: 0
     &,
     a{
         color: lighten($bg-color, 60%);
-    }
-
-    .github{
-        display: block;
-        float: right;
-    }
+    }    
 }
 
 .header-banner{
@@ -32,8 +27,9 @@ html, body{color: darken($bg-color, 10%); font-size: 18px; padding: 0; margin: 0
     h1{
         color: lighten($bg-color, 65%);
         font-family: 'Overlock', cursive;
-        font-size: 3em;
+        font-size: 4em;
         margin: 0;
+        text-shadow: 2px 2px 0 darken($bg-color, 10%);
     }
     
 }
@@ -73,5 +69,9 @@ html, body{color: darken($bg-color, 10%); font-size: 18px; padding: 0; margin: 0
         &:before{
             content: "Developed by: ";
         }
+    }
+    .github{
+        display: block;
+        float: right;
     }
 }
