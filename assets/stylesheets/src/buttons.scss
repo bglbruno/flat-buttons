@@ -50,6 +50,10 @@
 
 //== Buttons variants
 
+%btn-disabled{
+  	text-shadow: none;
+}
+
 @each $type, $color, $bg, $border in 
 	(default, $btn-default-color, $btn-default-bg, $btn-default-border),
 	(inverse, $btn-inverse-color, $btn-inverse-bg, $btn-inverse-border),
@@ -71,9 +75,9 @@
   				color: lighten($btn-default-color, 30%);
   				background-color: $gray-lighter;
 			} @else{
-				background-color: transparentize($bg, 0.3);
+				background-color: transparentize($bg, 0.3);	
 			}
-  			text-shadow: none;
+			@extend %btn-disabled;
 		}
 	}
 }
