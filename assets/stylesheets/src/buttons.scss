@@ -64,7 +64,9 @@
 	(danger, $btn-danger-color, $btn-danger-bg, $btn-danger-border) {
 
 	.btn-#{$type} {
+
 		@include btn-variant($color, $bg, $border);
+
 		&:hover{
 			@include btn-hover-variant($color, $bg, $border);
 		}
@@ -75,6 +77,7 @@
   				color: lighten($btn-default-color, 30%);
   				background-color: $gray-lighter;
 			} @else{
+				border-color: lighten($border, 30%);
 				background-color: transparentize($bg, 0.3);	
 			}
 			@extend %btn-disabled;
