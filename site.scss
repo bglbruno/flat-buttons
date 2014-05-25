@@ -25,6 +25,7 @@ html, body{color: darken($bg-color, 10%); font-size: 1em; padding: 0; margin: 0}
     overflow: hidden;
     
     h1{
+        letter-spacing: 4px;
         color: lighten($bg-color, 65%);
         font-family: 'Bree Serif', serif;
         font-size: 4em;
