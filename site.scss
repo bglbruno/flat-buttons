@@ -48,10 +48,13 @@ html, body{color: darken($bg-color, 10%); font-size: 1em; padding: 0; margin: 0}
 
     code{
         $bg-code: #C1289E;
-        padding: .5%;
-        font-size: .8em;
+        padding: .3% .5%;
+        font-size: 1em;
         background-color: lighten($bg-code, 50%);
+        border: 1px solid lighten($bg-code, 47%);;
         color: $bg-code;
+        -webkit-border-radius: 7px 7px 7px 7px;
+        border-radius: 7px 7px 7px 7px;
     }
 
     h3{color: darken($bg-color, 5%)}
