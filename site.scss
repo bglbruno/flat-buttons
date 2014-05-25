@@ -5,7 +5,7 @@ $bg-color: #3f4c6b;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
-html, body{color: darken($bg-color, 10%); font-size: 18px; padding: 0; margin: 0}
+html, body{color: darken($bg-color, 10%); font-size: 1em; padding: 0; margin: 0}
 .container{width: 95%; margin: 0 auto;}
 
 %base-header-footer{
@@ -39,7 +39,9 @@ html, body{color: darken($bg-color, 10%); font-size: 18px; padding: 0; margin: 0
 	margin: 2% 0;
 
     .header{
+
         h2:before{content: "- ";}
+        &,span{padding-left: 1.5%;}
         margin-bottom: 3%;
     }
 
@@ -61,6 +63,10 @@ html, body{color: darken($bg-color, 10%); font-size: 18px; padding: 0; margin: 0
 	margin-bottom: 1%;
 	-webkit-border-radius: 10px 10px 10px 10px;
 	border-radius: 10px 10px 10px 10px;
+
+    header{
+        h3{display: inline-block; margin-right: 1%;}
+    }
 }
 .footer{
     @extend %base-header-footer;

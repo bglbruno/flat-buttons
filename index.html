@@ -38,7 +38,12 @@
 
 		 	<section class="exemple">
 
-		 		<h3>Default</h3>
+		 		<header>
+		 			<h3>Default</h3>
+		 			<span>
+		 				<code>.btn-default</code>
+		 			</span>
+				</header>
 
 			 	<button class="btn btn-default" type="button">button</button>
 			 	<input  class="btn btn-default" type="button" value="input button">
@@ -46,7 +51,12 @@
 			 	<input  class="btn btn-default" type="reset" value="input reset">
 			 	<a class="btn btn-default" href="#">a link</a>
 
-			 	<h3>Inverse</h3>
+			 	<header>
+		 			<h3>Inverse</h3>
+		 			<span>
+		 				<code>.btn-inverse</code>
+		 			</span>
+				</header>
 
 			 	<button class="btn btn-inverse" type="button">button</button>
 			 	<input  class="btn btn-inverse" type="button" value="input button">
@@ -54,7 +64,12 @@
 			 	<input  class="btn btn-inverse" type="reset" value="input reset">
 			 	<a class="btn btn-inverse" href="#">a link</a>
 
-		 		<h3>Primary</h3>
+		 		<header>
+		 			<h3>Primary</h3>
+		 			<span>
+		 				<code>.btn-primary</code>
+		 			</span>
+				</header>
 
 			 	<button class="btn btn-primary" type="button">button</button>
 			 	<input  class="btn btn-primary" type="button" value="input button">
@@ -62,7 +77,12 @@
 			 	<input  class="btn btn-primary" type="reset" value="input reset">
 			 	<a class="btn btn-primary" href="#">a link</a>
 
-		 		<h3>Success</h3>
+		 		<header>
+		 			<h3>Success</h3>
+		 			<span>
+		 				<code>.btn-success</code>
+		 			</span>
+				</header>
 
 			 	<button class="btn btn-success" type="button">button</button>
 			 	<input  class="btn btn-success" type="button" value="input button">
@@ -70,7 +90,12 @@
 			 	<input  class="btn btn-success" type="reset" value="input reset">
 			 	<a class="btn btn-success" href="#">a link</a>
 
-		 		<h3>Info</h3>
+		 		<header>
+		 			<h3>Info</h3>
+		 			<span>
+		 				<code>.btn-info</code>
+		 			</span>
+				</header>
 
 			 	<button class="btn btn-info" type="button">button</button>
 			 	<input  class="btn btn-info" type="button" value="input button">
@@ -78,7 +103,12 @@
 			 	<input  class="btn btn-info" type="reset" value="input reset">
 			 	<a class="btn btn-info" href="#">a link</a>
 
-		 		<h3>Warning</h3>
+		 		<header>
+		 			<h3>Warning</h3>
+		 			<span>
+		 				<code>.btn-warning</code>
+		 			</span>
+				</header>
 
 			 	<button class="btn btn-warning" type="button">button</button>
 			 	<input  class="btn btn-warning" type="button" value="input button">
@@ -86,7 +116,12 @@
 			 	<input  class="btn btn-warning" type="reset" value="input reset">
 			 	<a class="btn btn-warning" href="#">a link</a>
 
-		 		<h3>Danger</h3>
+		 		<header>
+		 			<h3>Danger</h3>
+		 			<span>
+		 				<code>.btn-danger</code>
+		 			</span>
+				</header>
 
 			 	<button class="btn btn-danger" type="button">button</button>
 			 	<input  class="btn btn-danger" type="button" value="input button">
@@ -94,7 +129,12 @@
 			 	<input  class="btn btn-danger" type="reset" value="input reset">
 			 	<a class="btn btn-danger" href="#">a link</a>
 
-		 		<h3>Link</h3>
+		 		<header>
+		 			<h3>Link</h3>
+		 			<span>
+		 				<code>.btn-link</code>
+		 			</span>
+				</header>
 
 			 	<button class="btn btn-link" type="button">button</button>
 			 	<input  class="btn btn-link" type="button" value="input button">
@@ -140,8 +180,6 @@
 								<button class="btn btn-info" type="button">Default</button>
 								<button class="btn btn-info btn-sm" type="button">Small</button>
 								<button class="btn btn-info btn-xs" type="button">Extra Small</button>
-	 							
-	 							
 	 						</td>
 	 					</tr>
 	 					<tr>
@@ -213,9 +251,13 @@
 			
 			<header class="header">
 				<h2>Disabled state</h2>
+				<span>
+					Setting a state disabled for buttons, using the attribute
+					<code>disabled="disabled"</code> for 
+					<code>&lt;button&gt;</code>, and the class 
+					<code>.disabled</code> for <code>&lt;a&gt;</code> element.
+				</span>
 			</header>
-
-			<h3>Button element</h3>
 
 			<section class="exemple">
 
@@ -237,12 +279,15 @@
 			
 			<header class="header">
 				<h2>Groups</h2>
+				<span>
+					Group a series of buttons together on
+					 a single line with the button group.
+				</span>
+				<span>
+					Using a wrap element 
+					<code>&lt;div class="btn-group"&gt;</code> ... <code>&lt;/div&gt;</code>
+				</span>
 			</header>
-
-			<h3>
-				Group a series of buttons together on
-				 a single line with the button group.
-			</h3>
 
 			<section class="exemple">
 
@@ -255,7 +300,7 @@
 			 		<button class="btn btn-warning" type="button">Warning</button>
 			 		<button class="btn btn-danger" type="button">Danger</button>
 		 		</div>
-		 		
+
 		 	</section>
 
 	 	</section>
@@ -265,19 +310,14 @@
 			
 			<header class="header">
 				<h2>Icons</h2>
+				<span>
+					Use Flat-Buttons with
+					<a href="http://fortawesome.github.io/Font-Awesome/" 
+						class="btn-link">Font Awesome</a>!
+				</span>
 			</header>
 
-			<h3>
-				Flat-Buttons uses 
-				<a 
-					href="http://fortawesome.github.io/Font-Awesome/" 
-					class="btn-link">
-					Font Awesome
-				</a>
-			</h3>
-
 			<section class="exemple">
-
 		 		
 		 		<button class="btn btn-default" type="button">
 		 			<i class="fa fa-cloud-download"></i> Download
