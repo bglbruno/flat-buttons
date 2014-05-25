@@ -16,12 +16,16 @@ html, body {
 .header-banner {
   background-color: #3f4c6b;
   padding: 3% 6%;
-  color: #eaecf2; }
+  color: #eaecf2;
+  overflow: hidden; }
   .header-banner h1 {
     color: #fafafc;
     font-family: 'Overlock', cursive;
     font-size: 3em;
     margin: 0; }
+  .header-banner .github {
+    display: block;
+    float: right; }
 
 .section {
   background-color: #f7f7f7;

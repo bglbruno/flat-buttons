@@ -12,11 +12,17 @@ html, body{color: darken($bg-color, 10%); font-size: 18px; padding: 0; margin: 0
     background-color: $bg-color;
     padding: 3% 6%;
     color: lighten($bg-color, 60%);
+    overflow: hidden;
+    
     h1{
         color: lighten($bg-color, 65%);
         font-family: 'Overlock', cursive;
         font-size: 3em;
         margin: 0;
+    }
+    .github{
+        display: block;
+        float: right;
     }
 }
 .section{
