@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="flat-buttons.min.css" media="all" rel="stylesheet" />
     <link href="site.min.css" media="all" rel="stylesheet" />
+    <link href="normalize.css" media="all" rel="stylesheet" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
  </head>
 <body>
 	<nav class="menu">
 		<div class="container">
 			<ul>
+				<li>
+					<a href="#" class="font-logo">Flat-Buttons</a>
+				</li>
 				<li><a href="#install">Install</a></li>
-				<li><a href="#download">Download</a></li>
-				<li><a href="#"><i class="fa fa-bars"></i></a></li>
 				<li><a href="#variants">Variants</a></li>
 				<li><a href="#sizes">Sizes</a></li>
 				<li><a href="#blocks">Block button</a></li>
@@ -45,9 +46,32 @@
  		<div class="content">
 
  			<section class="section" id="variants">
+ 				
  				<header class="header">
 			 		<h2>Install</h2>
 			 	</header>
+
+		 		<section class="exemple">
+
+					<header>
+			 			<h3>SASS Ruby Gem</h3>
+					</header>
+					<code>gem "flat-buttons-sass"</code>
+
+					<header>
+			 			<h3>CDN</h3>
+					</header>
+					<code>
+						&lt;link href="http://bglbruno.github.io/flat-buttons/min.css" rel="stylesheet"&gt;
+					</code>
+
+					<header>
+			 			<h3>Default CSS</h3>
+					</header>
+					<code>
+						&lt;link href="path/to/flat-buttons/min.css" rel="stylesheet"&gt;
+					</code>
+		 		</section>
 
  			</section>
 
@@ -348,28 +372,28 @@
 				<section class="exemple">
 			 		
 			 		<button class="btn btn-default" type="button">
-			 			<i class="fa fa-cloud-download"></i> Download
+			 			<i class="fa fa-cloud-download fa-fw"></i> Download
 			 		</button>
 			 		<button class="btn btn-inverse" type="button">
-			 			<i class="fa fa-comment"></i> Comment
+			 			<i class="fa fa-comment fa-fw"></i> Comment
 			 		</button>
 			 		<button class="btn btn-primary" type="button">
-			 			<i class="fa fa-inbox"></i> Inbox
+			 			<i class="fa fa-inbox fa-fw"></i> Inbox
 			 		</button>
 			 		<button class="btn btn-success" type="button">
-			 			<i class="fa fa-send"></i> Send a message
+			 			<i class="fa fa-send fa-fw"></i> Send a message
 			 		</button>
 			 		<button class="btn btn-info" type="button">
-			 			<i class="fa fa-tags"></i> Tags
+			 			<i class="fa fa-tags fa-fw"></i> Tags
 			 		</button>
 			 		<button class="btn btn-warning" type="button">
-			 			<i class="fa fa-exclamation-circle"></i> Warning!
+			 			<i class="fa fa-exclamation-circle fa-fw"></i> Warning!
 			 		</button>
 			 		<button class="btn btn-danger" type="button">
-			 			<i class="fa fa-sign-out"></i> Sign out
+			 			<i class="fa fa-sign-out fa-fw"></i> Sign out
 			 		</button>
 			 		<a class="btn btn-link" href="#">
-			 			<i class="fa fa-anchor"></i> Anchor Link
+			 			<i class="fa fa-anchor fa-fw"></i> Anchor Link
 			 		</a>
 
 			 	</section>
