@@ -1,4 +1,6 @@
-flat-buttons
+flat-buttons v0.1.0
 ============
 
-A small framework for buttons, written with pure css.
+A simple framework for web buttons
+
+http://bglbruno.github.io/flat-buttons
