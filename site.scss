@@ -81,7 +81,7 @@ a{
 
 
         @each $name, $content in 
-                        (install, "\f085"),
+                        (getstarted, "\f085"),
                         (variants, "\f1de"),
                         (sizes, "\f047"),
                         (blocks, "\f1b2"),
