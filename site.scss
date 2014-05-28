@@ -124,6 +124,7 @@ aside{
                 (getstarted, "\f024"),
                 (examples, "\f004"),
                 (variants, "\f1de"),
+                (outlines, "\f096"),
                 (sizes, "\f047"),
                 (blocks, "\f1b2"),
                 (disableds, "\f011"),
@@ -135,7 +136,7 @@ aside{
         content: $content;
         padding-right: 1.5%;
         font-size: .8em;
-        color: lighten($text-color-default, 50%);
+        color: lighten($bg-color, 30%);
     }
 
 }
