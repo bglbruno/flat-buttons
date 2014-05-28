@@ -12,6 +12,13 @@
     &.active {
       z-index: 2;
     }
+    @include border-radius-all(0);
+    &:first-child{
+      @include border-radius($br-default, 0, 0, $br-default);
+    };
+    &:last-child{
+      @include border-radius(0, $br-default, $br-default, 0);
+    };
   }
 }
 

@@ -37,33 +37,35 @@ $btn-font-weight: 			700;
 //
 // buttons, define text, background and border color.
 
+$per-darken:					 .9%;
+
 $btn-default-color:              #333;
 $btn-default-bg:                 #fff;
 $btn-default-border:             #ccc;
 
 $btn-inverse-color:              #fff;
 $btn-inverse-bg:                 #555;
-$btn-inverse-border:             #444;
+$btn-inverse-border:             darken($btn-inverse-bg, $per-darken);
 
 $btn-primary-color:              #fff;
 $btn-primary-bg:                 $brand-primary;
-$btn-primary-border:             darken($btn-primary-bg, 5%);
+$btn-primary-border:             darken($btn-primary-bg, $per-darken);
 
 $btn-success-color:              #fff;
 $btn-success-bg:                 $brand-success;
-$btn-success-border:             darken($btn-success-bg, 5%);
+$btn-success-border:             darken($btn-success-bg, $per-darken);
 
 $btn-info-color:                 #fff;
 $btn-info-bg:                    $brand-info;
-$btn-info-border:                darken($btn-info-bg, 5%);
+$btn-info-border:                darken($btn-info-bg, $per-darken);
 
 $btn-warning-color:              #fff;
 $btn-warning-bg:                 $brand-warning;
-$btn-warning-border:             darken($btn-warning-bg, 5%);
+$btn-warning-border:             darken($btn-warning-bg, $per-darken);
 
 $btn-danger-color:               #fff;
 $btn-danger-bg:                  $brand-danger;
-$btn-danger-border:              darken($btn-danger-bg, 5%);
+$btn-danger-border:              darken($btn-danger-bg, $per-darken);
 
 $btn-link-disabled-color:        $gray-light;
 
@@ -75,7 +77,7 @@ $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 $font-family-base:        $font-family-sans-serif;
 
-$font-size-base:          0.9em;
+$font-size-base:          1em;
 
 $font-size-large:         $font-size-base * 1.25;
 $font-size-small:         $font-size-base * 0.90;
@@ -83,3 +85,7 @@ $font-size-extra-small:   $font-size-base * 0.80;
 
 $line-height-base:        1.428571429;
 $line-height-computed:    floor(($font-size-base * $line-height-base));
+
+//= Border Radius
+//
+$br-default:	3px;

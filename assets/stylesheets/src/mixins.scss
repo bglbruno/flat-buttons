@@ -8,3 +8,20 @@
 @mixin btn-hover-variant($color, $bg, $border){
 	@include btn-variant(darken($color, 1%), darken($bg, 10%), darken($border, 10%));
 }
+
+//== Border Radius
+//
+@mixin border-radius-all($r){
+	@include border-radius($r, $r, $r, $r);
+}
+@mixin border-radius($t, $l, $b, $r){
+	-webkit-border-radius: $t $l $b $r;
+    border-radius: $t $l $b $r;
+}
+@mixin transitions($e, $t, $fx){
+	-webkit-transition: $e $t $fx;
+	-moz-transition: $e $t $fx;
+	-ms-transition: $e $t $fx;
+	-o-transition: $e $t $fx;
+	transition: $e $t $fx;
+}

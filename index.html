@@ -12,22 +12,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
  </head>
 <body>
-	<nav class="menu">
-		<div class="container">
-			<ul>
-				<li>
-					<a href="#" class="font-logo">Flat-Buttons</a>
-				</li>
-				<li><a href="#getstarted">Get Started</a></li>
-				<li><a href="#variants">Variants</a></li>
-				<li><a href="#sizes">Sizes</a></li>
-				<li><a href="#blocks">Block button</a></li>
-				<li><a href="#disableds">State Disabled</a></li>
-				<li><a href="#groups">Groups</a></li>
-				<li><a href="#icons">Icons</a></li>
-			</ul>
-		</div>
-	</nav>
+	
 
 	<header class="header-banner">
 		
@@ -36,37 +21,65 @@
 				<h1>FLAT-BUTTONS</h1>
 				<span>A simple framework for web buttons.</span>
 			</div>
+			<div class="download-latest">
+				<a href="flat-buttons.min.css" class="btn btn-primary btn-lg" download>
+					<i class="fa fa-download"></i> Download v0.1.0
+				</a>
+			</div>
 		</div>
 	</header>
 
  	<div class="container">
  		
+ 		<aside>
+ 			<nav class="menu">
+				<div class="container">
+					<ul>
+						<li class="getstarted"><a href="#getstarted">Get Started</a></li>
+						<li class="examples"><a href="#examples">Examples</a>
+							<ul>
+								<li class="variants"><a href="#variants">Variants</a></li>
+								<li class="sizes"><a href="#sizes">Sizes</a></li>
+								<li class="blocks"><a href="#blocks">Block button</a></li>
+								<li class="disableds"><a href="#disableds">State Disabled</a></li>
+								<li class="groups"><a href="#groups">Groups</a></li>
+								<li class="icons"><a href="#icons">Icons</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+ 		</aside>
+
  		<div class="content">
 
  			<section class="section" id="getstarted">
  				
  				<header class="header">
-			 		<h2 class="getstarted">Install</h2>
+			 		<h2 class="getstarted">Get started</h2>
 			 	</header>
 
 		 		<section class="exemple">
 
 					<header>
-			 			<h3>SASS Ruby Gem</h3>
-					</header>
-					<code>gem "flat-buttons-sass"</code>
-
-					<header>
 			 			<h3>CDN</h3>
+			 			<span class="md-block">
+			 				Paste the following code into the <code>&lt;head&gt;</code> section of your site's HTML.
+			 			</span>
 					</header>
-					<code>
-						&lt;link href="http://bglbruno.github.io/flat-buttons/min.css" rel="stylesheet"&gt;
+					<code class="html">
+						&lt;link href="http://bglbruno.github.io/flat-buttons.com/flat-buttons.min.css" rel="stylesheet"&gt;
 					</code>
 
 					<header>
 			 			<h3>Default CSS</h3>
+			 			<span class="md-block">
+			 				Copy the file into your project.
+							In the <code>&lt;head&gt;</code> of your html,
+							reference the location to your flat-buttons.min.css.
+			 			</span>	
 					</header>
-					<code>
+					<code class="html">
 						&lt;link href="path/to/flat-buttons.min.css" rel="stylesheet"&gt;
 					</code>
 		 		</section>
@@ -196,6 +209,97 @@
 			 	</section>
 		 	</section>
 
+		 	<section class="section" id="outlines">
+
+		 		<header class="header">
+			 		<h2 class="outlines">Outline variants</h2>
+			 		<span>Use the class <code>.btn-outline</code> for outline buttons variants.</span>
+			 		<span>Only for <code>&lt;button&gt;</code> and <code>&lt;input&gt;</code>.</span>
+			 	</header>
+
+			 	<section class="exemple">
+
+			 		<header>
+			 			<h3>Inverse</h3>
+			 			<span>
+			 				<code>.btn-inverse</code> and <code>.btn-outline</code>
+			 			</span>
+					</header>
+
+				 	<button class="btn btn-inverse btn-outline" type="button">button</button>
+				 	<input  class="btn btn-inverse btn-outline" type="button" value="input button">
+				 	<input  class="btn btn-inverse btn-outline" type="submit" value="input submit">
+				 	<input  class="btn btn-inverse btn-outline" type="reset" value="input reset">
+				 	<a class="btn btn-inverse btn-outline" href="#">a link</a>
+
+			 		<header>
+			 			<h3>Primary</h3>
+			 			<span>
+			 				<code>.btn-primary</code> and <code>.btn-outline</code>
+			 			</span>
+					</header>
+
+				 	<button class="btn btn-primary btn-outline" type="button">button</button>
+				 	<input  class="btn btn-primary btn-outline" type="button" value="input button">
+				 	<input  class="btn btn-primary btn-outline" type="submit" value="input submit">
+				 	<input  class="btn btn-primary btn-outline" type="reset" value="input reset">
+				 	<a class="btn btn-primary btn-outline" href="#">a link</a>
+
+			 		<header>
+			 			<h3>Success</h3>
+			 			<span>
+			 				<code>.btn-success</code> and <code>.btn-outline</code>
+			 			</span>
+					</header>
+
+				 	<button class="btn btn-success btn-outline" type="button">button</button>
+				 	<input  class="btn btn-success btn-outline" type="button" value="input button">
+				 	<input  class="btn btn-success btn-outline" type="submit" value="input submit">
+				 	<input  class="btn btn-success btn-outline" type="reset" value="input reset">
+				 	<a class="btn btn-success btn-outline" href="#">a link</a>
+
+			 		<header>
+			 			<h3>Info</h3>
+			 			<span>
+			 				<code>.btn-info</code> and <code>.btn-outline</code>
+			 			</span>
+					</header>
+
+				 	<button class="btn btn-info btn-outline" type="button">button</button>
+				 	<input  class="btn btn-info btn-outline" type="button" value="input button">
+				 	<input  class="btn btn-info btn-outline" type="submit" value="input submit">
+				 	<input  class="btn btn-info btn-outline" type="reset" value="input reset">
+				 	<a class="btn btn-info btn-outline" href="#">a link</a>
+
+			 		<header>
+			 			<h3>Warning</h3>
+			 			<span>
+			 				<code>.btn-warning</code> and <code>.btn-outline</code>
+			 			</span>
+					</header>
+
+				 	<button class="btn btn-warning btn-outline" type="button">button</button>
+				 	<input  class="btn btn-warning btn-outline" type="button" value="input button">
+				 	<input  class="btn btn-warning btn-outline" type="submit" value="input submit">
+				 	<input  class="btn btn-warning btn-outline" type="reset" value="input reset">
+				 	<a class="btn btn-warning btn-outline" href="#">a link</a>
+
+			 		<header>
+			 			<h3>Danger</h3>
+			 			<span>
+			 				<code>.btn-danger</code> and <code>.btn-outline</code>
+			 			</span>
+					</header>
+
+				 	<button class="btn btn-danger btn-outline" type="button">button</button>
+				 	<input  class="btn btn-danger btn-outline" type="button" value="input button">
+				 	<input  class="btn btn-danger btn-outline" type="submit" value="input submit">
+				 	<input  class="btn btn-danger btn-outline" type="reset" value="input reset">
+				 	<a class="btn btn-danger btn-outline" href="#">a link</a>
+
+			 	</section>
+		 	</section>
+
 		 	<section class="section" id="sizes">
 
 		 		<header class="header">
@@ -210,64 +314,48 @@
 
 		 		<section class="exemple">
 
-		 			<table>
-		 				<tbody>
-		 					<tr>
-		 						<td>
-		 							<button class="btn btn-default btn-lg" type="button">Large</button>
-								 	<button class="btn btn-default" type="button">Default</button>
-								 	<button class="btn btn-default btn-sm" type="button">Small</button>
-								 	<button class="btn btn-default btn-xs" type="button">Extra Small</button>
-		 						</td>
-		 						<td>
-		 							<button class="btn btn-primary btn-lg" type="button">Large</button>
-								 	<button class="btn btn-primary" type="button">Default</button>
-								 	<button class="btn btn-primary btn-sm" type="button">Small</button>
-								 	<button class="btn btn-primary btn-xs" type="button">Extra Small</button>
-		 							
-		 						</td>
-		 						<td>
-		 							<button class="btn btn-info btn-lg" type="button">Large</button>
-									<button class="btn btn-info" type="button">Default</button>
-									<button class="btn btn-info btn-sm" type="button">Small</button>
-									<button class="btn btn-info btn-xs" type="button">Extra Small</button>
-		 						</td>
-		 					</tr>
-		 					<tr>
-		 						<td>
-		 							<button class="btn btn-inverse btn-lg" type="button">Large</button>
-								 	<button class="btn btn-inverse" type="button">Default</button>
-								 	<button class="btn btn-inverse btn-sm" type="button">Small</button>
-								 	<button class="btn btn-inverse btn-xs" type="button">Extra Small</button>
-		 							
-		 						</td>
-		 						<td>
-		 							<button class="btn btn-success btn-lg" type="button">Large</button>
-								 	<button class="btn btn-success" type="button">Default</button>
-								 	<button class="btn btn-success btn-sm" type="button">Small</button>
-								 	<button class="btn btn-success btn-xs" type="button">Extra Small</button>	
-		 							
-		 						</td>
-		 						<td>
-		 							<button class="btn btn-warning btn-lg" type="button">Large</button>
-									<button class="btn btn-warning" type="button">Default</button>
-									<button class="btn btn-warning btn-sm" type="button">Small</button>
-									<button class="btn btn-warning btn-xs" type="button">Extra Small</button>
-		 							
-		 						</td>
-		 					</tr>
-		 					<tr>
-		 						<td></td>
-		 						<td>
-		 							<button class="btn btn-danger btn-lg" type="button">Large</button>
-									<button class="btn btn-danger" type="button">Default</button>
-									<button class="btn btn-danger btn-sm" type="button">Small</button>
-									<button class="btn btn-danger btn-xs" type="button">Extra Small</button>
-		 						</td>
-		 						<td></td>
-		 					</tr>
-		 				</tbody>
-		 			</table>
+					<div class="inline-block btn-sizes">
+						<button class="btn btn-default btn-lg" type="button">Large</button>
+					 	<button class="btn btn-default" type="button">Default</button>
+					 	<button class="btn btn-default btn-sm" type="button">Small</button>
+					 	<button class="btn btn-default btn-xs" type="button">Extra Small</button>
+					</div>
+					<div class="inline-block btn-sizes">
+						<button class="btn btn-primary btn-lg" type="button">Large</button>
+					 	<button class="btn btn-primary" type="button">Default</button>
+					 	<button class="btn btn-primary btn-sm" type="button">Small</button>
+					 	<button class="btn btn-primary btn-xs" type="button">Extra Small</button>
+					</div>
+					<div class="inline-block btn-sizes">
+						<button class="btn btn-info btn-lg" type="button">Large</button>
+						<button class="btn btn-info" type="button">Default</button>
+						<button class="btn btn-info btn-sm" type="button">Small</button>
+						<button class="btn btn-info btn-xs" type="button">Extra Small</button>
+					</div>
+					<div class="inline-block btn-sizes">
+						<button class="btn btn-inverse btn-lg" type="button">Large</button>
+					 	<button class="btn btn-inverse" type="button">Default</button>
+					 	<button class="btn btn-inverse btn-sm" type="button">Small</button>
+					 	<button class="btn btn-inverse btn-xs" type="button">Extra Small</button>
+					</div>	
+					<div class="inline-block btn-sizes">
+						<button class="btn btn-success btn-lg" type="button">Large</button>
+					 	<button class="btn btn-success" type="button">Default</button>
+					 	<button class="btn btn-success btn-sm" type="button">Small</button>
+					 	<button class="btn btn-success btn-xs" type="button">Extra Small</button>	
+					</div>
+					<div class="inline-block btn-sizes">
+						<button class="btn btn-warning btn-lg" type="button">Large</button>
+						<button class="btn btn-warning" type="button">Default</button>
+						<button class="btn btn-warning btn-sm" type="button">Small</button>
+						<button class="btn btn-warning btn-xs" type="button">Extra Small</button>
+					</div>
+					<div class="inline-block btn-sizes">
+						<button class="btn btn-danger btn-lg" type="button">Large</button>
+						<button class="btn btn-danger" type="button">Default</button>
+						<button class="btn btn-danger btn-sm" type="button">Small</button>
+						<button class="btn btn-danger btn-xs" type="button">Extra Small</button>
+					</div>
 
 				 </section>
 
@@ -333,10 +421,9 @@
 					<span>
 						Group a series of buttons together on
 						 a single line with the button group.
-					</span>
-					<span>
+						<br>
 						Using a wrap element 
-						<code>&lt;div class="btn-group"&gt;</code> ... <code>&lt;/div&gt;</code>
+						<code>&lt;div class="btn-group"&gt;</code> ... <code>&lt;/div&gt;</code>.
 					</span>
 				</header>
 
@@ -398,14 +485,14 @@
 
 			 	<section class="exemple">
 
-			 		<button class="btn btn-warning" type="button">
+			 		<button class="btn btn-warning btn-lg" type="button">
 			 			<i class="fa fa-spinner fa-spin"></i> Loading
 			 		</button>
 			 		<button class="btn btn-success" type="button">
 			 			<i class="fa fa-check"></i> Succeed
 			 		</button>
-			 		<button class="btn btn-danger" type="button">
-			 			<i class="fa fa-ban"></i> No!
+			 		<button class="btn btn-danger btn-xs" type="button">
+			 			<i class="fa fa-ban"></i> Not alloed
 			 		</button> 
 			 		
 				</section>
@@ -417,13 +504,13 @@
 					</header>
 
 			 		<div class="btn-group">
-			 			<button class="btn btn-info" type="button">
+			 			<button class="btn btn-info btn-lg" type="button">
 			 				<i class="fa fa-refresh"></i>
 			 			</button>
-			 			<button class="btn btn-primary" type="button">
+			 			<button class="btn btn-primary btn-lg" type="button">
 			 				<i class="fa fa-plus"></i> Add
 			 			</button>
-			 			<button class="btn btn-default" type="button">
+			 			<button class="btn btn-default btn-lg" type="button">
 			 				<i class="fa fa-upload"></i> Upload
 			 			</button>
 			 		</div>
@@ -451,10 +538,6 @@
 
  	<footer class="footer">
  		<div class="container">
-
- 			<a href="https://github.com/bglbruno" target="_blank" class="author">
-				Bruno Gonçales
-			</a>
  			
  			<div class="github">
 				<iframe src="http://ghbtns.com/github-btn.html?user=bglbruno&repo=flat-buttons&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>

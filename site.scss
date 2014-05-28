@@ -1,5 +1,23 @@
-$bg-color: #3f4c6b;
-$text-color-default: #333;
+$bg-color:              #526BA5;
+$text-color-default:    #333;
+
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+
+$screen-xs-max: $screen-sm-min -1;
+$screen-sm-max: $screen-md-min -1;
+
+
+%font-logo{font-family: 'Bree Serif', serif;}
+%base-header-footer{
+    background-color: $bg-color;
+    &, a{color: lighten($bg-color, 60%);}
+    width: 100%;
+    overflow: hidden;
+}
+
+
 
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
@@ -24,24 +42,22 @@ a{
     }
 }
 .container{
-    width: 70%; margin: 0 auto;
-}
-
-%base-header-footer{
-    background-color: $bg-color;
-    &, a{color: lighten($bg-color, 60%);}
-}
-
-%font-logo{
-    font-family: 'Bree Serif', serif;
+    width: 90%;
+    margin: 0 auto;
+    @media (max-width: $screen-sm-min){
+        width: 100%;
+    }
 }
 
 .header-banner{
     @extend %base-header-footer;
 
-    padding: 5% 3%;
-    overflow: hidden;
-    
+    padding: 3%;
+    @media (max-width: $screen-xs-min){
+        padding: 15% 3%;
+        text-align: center;
+    }
+
     .header-logo h1{
         letter-spacing: 4px;
         color: lighten($bg-color, 65%);
@@ -49,58 +65,87 @@ a{
         font-size: 4em;
         margin: 0;
         text-shadow: 8px 8px 0 darken($bg-color, 10%);
+
+        @media (max-width: $screen-sm-min){
+            font-size: 3em;
+        }
+        @media (max-width: $screen-xs-min){
+            font-size: 2em;
+            display: block;
+        }
     }
-    
-    
+
+    .download-latest{
+        margin-top: 2%;
+        @media (max-width: $screen-sm-min){
+            margin-top: 5%;
+        }
+        @media (max-width: $screen-xs-min){
+            margin-top: 10%;
+        }
+    }
 }
-.menu{
-    background-color: lighten($bg-color, 55%);
-    padding: .1% 0;
-    ul{
-        margin: 0;
-        li{
-            display: inline;
-            a {
-                padding: .2% .5%;
-                &.font-logo{
-                    font-weight: bolder;
-                    font-size: 1.5em;
-                    @extend %font-logo;
-                }
+.content{
+    width: 70%;
+    float: left;
+    margin: 2% 0;
+    @media (max-width: $screen-md-min){
+        width: 100%;
+        float: none;
+    }
+}
+aside{
+
+    @media (max-width: $screen-md-min){
+        display: none;
+        .menu{
+            display: none;
+        }
+    }
+
+    width: 30%;
+    float: right;
+    margin: 2% 0;
+
+    .menu{
+        
+        border: 1px solid lighten($bg-color, 55%);
+        ul{
+            list-style: none;
+            li{
+                margin: 5% 0;
+                a { padding: 3%;}
             }
         }
     }
 }
+
+@each $name, $content in 
+                (getstarted, "\f024"),
+                (examples, "\f004"),
+                (variants, "\f1de"),
+                (sizes, "\f047"),
+                (blocks, "\f1b2"),
+                (disableds, "\f011"),
+                (groups, "\f00a"),
+                (icons, "\f02e"){
+
+    .#{$name}:before{
+        font-family: FontAwesome;
+        content: $content;
+        padding-right: 1.5%;
+        font-size: .8em;
+        color: lighten($text-color-default, 50%);
+    }
+
+}
+
 .section{
 	background-color: #f7f7f7;
     border: 1px solid darken(#f7f7f7, 5%);
 	padding: 2% 3%;
-	margin: 2% 0;
-
+    margin: 1% 0;
     .header{
-
-
-        @each $name, $content in 
-                        (getstarted, "\f085"),
-                        (variants, "\f1de"),
-                        (sizes, "\f047"),
-                        (blocks, "\f1b2"),
-                        (disableds, "\f011"),
-                        (groups, "\f00a"),
-                        (icons, "\f02e"){
-
-            h2.#{$name}:before{
-                font-family: FontAwesome;
-                content: $content;
-                padding-right: 1.5%;
-                font-size: .8em;
-                color: lighten($text-color-default, 50%);
-            }
-
-        }
-        
-
-
         &,span:first-child{padding-left: 1.5%;}
         margin-bottom: 3%;
     }
@@ -114,6 +159,18 @@ a{
         color: $bg-code;
         -webkit-border-radius: 7px 7px 7px 7px;
         border-radius: 7px 7px 7px 7px;
+
+        word-wrap: break-word;
+        
+        &.html{
+            background-color: #333;
+            display: inline-block;
+            padding: 2%;
+            width: 100%;
+            color: #eee;
+            border: none;
+            
+        }
     }
 
     h3{color: #444}
@@ -129,20 +186,27 @@ a{
     border: 1px solid #ddd;
 
     header{
-        h3{display: inline-block; margin-right: 1%;}
+        h3{
+            display: inline-block;
+            margin-right: 1%;
+        }
+        @media (max-width: $screen-md-min){
+            span.md-block{display: block; margin-bottom: 5%;}
+        }
     }
 }
 .footer{
+    @media (max-width: $screen-xs-min){
+        display: none;
+    }
     @extend %base-header-footer;
     padding: 2% 3%;
-    overflow: hidden;
-    .author{
-        &:before{
-            content: "Developed by: ";
-        }
-    }
-    .github{
-        display: block;
-        float: right;
-    }
+    text-align: center;
+}
+.inline-block{
+    display: inline-block; 
+}
+.btn-sizes{
+    @extend .inline-block;
+    margin: 2%;
 }
