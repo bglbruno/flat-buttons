@@ -17,8 +17,6 @@ $screen-sm-max: $screen-md-min -1;
     overflow: hidden;
 }
 
-
-
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -210,4 +208,8 @@ aside{
 .btn-sizes{
     @extend .inline-block;
     margin: 2%;
+}
+.github{
+    margin-top: 2%;
+    overflow: hidden;
 }
